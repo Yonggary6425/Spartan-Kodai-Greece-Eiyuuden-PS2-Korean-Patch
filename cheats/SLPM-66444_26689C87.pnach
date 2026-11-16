@@ -1,0 +1,49 @@
+gametitle=Spartan - Kodai Greece Eiyuuden (J) (SLPM-66444) [CRC 26689C87]
+// 유럽판(SLES-53393, 72E1E60E) 치트를 일본판 실행파일 분석으로 주소 이식 (한글패치판에도 그대로 적용)
+// 데이터 주소 +0x2180, 화살 코드 +0x14C0 (일본판 ELF에서 참조 위치 확인)
+
+[무적 (체력 무한)]
+description=게임 내장 디버그 치트 'Invincible' 플래그
+patch=1,EE,005EC7FC,extended,00000001
+
+[화살 무한]
+description=화살을 쏴도 줄지 않음
+patch=1,EE,2030F270,extended,00000000
+
+[화살 무한 (99개 고정)]
+patch=1,EE,2030F26C,extended,24020063
+
+[화살 획득량 증가]
+patch=1,EE,2030F26C,extended,00441021
+
+[적 매우 약화]
+patch=1,EE,2057EC84,extended,3C000000
+
+[적 약화]
+patch=1,EE,2057EC84,extended,3E000000
+
+[싱글 미션 리플레이 전부 해금]
+patch=1,EE,005EE368,extended,0000000E
+
+[아레나 챌린지 전부 해금]
+patch=1,EE,005EE3B8,extended,00000005
+
+[전부 해금 (미션·아레나·갤러리)]
+patch=1,EE,005EE368,extended,0000000E
+patch=1,EE,205EE3B8,extended,01010105
+patch=1,EE,405EE3BC,extended,00100001
+patch=1,EE,01010101,extended,00000000
+
+[갤러리 전부 해금]
+patch=1,EE,105EE3D2,extended,00000101
+patch=1,EE,405EE3D4,extended,000A0001
+patch=1,EE,01010101,extended,00000000
+
+[HUD 숨기기]
+patch=1,EE,005EC805,extended,00000001
+
+[디버그 자유 카메라]
+patch=1,EE,005EC809,extended,00000001
+
+[게임 정지 (START로 재개)]
+patch=1,EE,005EC82B,extended,00000001

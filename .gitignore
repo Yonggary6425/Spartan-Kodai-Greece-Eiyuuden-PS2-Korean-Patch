@@ -1,0 +1,5 @@
+*.iso
+*.ISO
+DATA/
+DATA_KOR/
+*.PAK
